@@ -1,5 +1,6 @@
-FROM python:3.13.0a4-slim-bullseye
+FROM python:alpine3.19
 WORKDIR /app
 COPY . .
 RUN pip install --no-cache-dir -r requirements.txt
+
 CMD [ "python", "app.py"]
